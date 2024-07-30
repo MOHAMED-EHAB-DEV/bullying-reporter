@@ -1,0 +1,20 @@
+#reports-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  list-style: disc;
+  flex-direction: column;
+}
+
+.report-item {
+  display: flex list-item;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.report-item p {
+  margin: 5px 0;
+}

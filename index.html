@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Anti-Bullying Platform</title>
+
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="">
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1>Anti-Bullying Platform</h1>
+
+        <nav>
+          <ul>
+            <li><a href="#home" style="text-decoration: underline;">Home</a></li>
+
+            <li><a href="#profiles">User Profiles</a></li>
+
+            <li><a href="#report">Report an Incident</a></li>
+
+            <li><a href="#resources">Educational Resources</a></li>
+
+            <li><a href="#support">Support Resources</a></li>
+
+            <li><a href="reports.html">All Reports</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="home">
+      <div class="container">
+        <h2>Welcome to the Anti-Bullying Platform</h2>
+
+        <p>Empowering Change, Ending Bullying</p>
+      </div>
+    </section>
+
+    <section id="profiles">
+      <div class="container">
+        <h2>User Profiles</h2>
+
+        <button onclick="showProfile('student')">Student Profile</button>
+
+        <button onclick="showProfile('teacher')">Teacher Profile</button>
+
+        <button onclick="showProfile('parent')">Parent Profile</button>
+
+        <div id="profile-details"></div>
+      </div>
+    </section>
+
+    <section id="report">
+      <div class="container">
+        <h2>Report an Incident</h2>
+
+        <form id="report-form">
+          <label for="type">Type of Bullying:</label>
+
+          <select id="type">
+            <option value="cyberbullying">Cyberbullying</option>
+
+            <option value="physical">Physical</option>
+
+            <option value="verbal">Verbal</option>
+          </select>
+
+          <br />
+
+          <label for="details">Details:</label>
+
+          <textarea id="details" rows="4" cols="50"></textarea>
+
+          <br />
+
+          <button type="button" onclick="submitReport()">Submit</button>
+        </form>
+
+        <div id="report-message"></div>
+      </div>
+    </section>
+
+    <section id="resources">
+      <div class="container">
+        <h2>Educational Resources</h2>
+
+        <ul>
+          <li>
+            <a
+              href="https://youtu.be/pDG1-BCZvTE?si=0G1cEkG-cqtoqBb7"
+              target="_blank"
+              >Understanding Bullying</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://youtu.be/dWNvHs8YMRE?si=XWRtTAUTcGUkIVcc"
+              target="_blank"
+              >Prevention Strategies</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://youtu.be/d6VZxyNMqZc?si=8fz5sOARE8UZcBek"
+              target="_blank"
+              >How to Support Victims</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="support">
+      <div class="container">
+        <h2>Support Resources</h2>
+
+        <p>Contact information for counselors and support hotlines.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>Contact us: info@antibullying.org</p>
+
+        <p>&copy; 2024 Anti-Bullying Platform</p>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
