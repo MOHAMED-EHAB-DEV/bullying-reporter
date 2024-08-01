@@ -18,8 +18,34 @@
             <li><a href="#report">Report an Incident</a></li>
             <li><a href="#resources">Educational Resources</a></li>
             <li><a href="#support">Support Resources</a></li>
-            <li><a href="reports.html" style="text-decoration: underline;">All Reports</a></li>
+            <li>
+              <a href="reports.html" style="text-decoration: underline"
+                >All Reports</a
+              >
+            </li>
           </ul>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
+            "
+          >
+            <button id="signOut">SignOut</button>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+              "
+            >
+              <h4 id="name"></h4>
+              <p id="email"></p>
+            </div>
+          </div>
         </nav>
       </div>
     </header>
@@ -41,5 +67,6 @@
     </footer>
 
     <script src="report.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

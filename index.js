@@ -1,3 +1,17 @@
+const signOut = document.querySelector("#signOut");
+const name = document.querySelector("#name");
+const email = document.querySelector("#email");
+
+const user = localStorage.getItem('user');
+const userData = JSON.parse(user); 
+
+if (!user) {
+  window.location.href = '/signin.html';
+} else {
+  name.textContent = userData.username;
+  email.textContent = userData.email;
+}
+
 function showProfile(profileType) {
   let profileDetails = "";
 
@@ -26,8 +40,10 @@ function showProfile(profileType) {
 
 function submitReport() {
   const type = document.getElementById("type").value;
-
   const details = document.getElementById("details").value;
+  const name = document.getElementById('name').value;
+
+  console.log(name, 'name')
 
   if (!details) {
     document.getElementById("report-message").innerHTML =
@@ -44,6 +60,8 @@ function submitReport() {
     body: JSON.stringify({
       type,
       details: details.replace(/\n/g, "<br>"),
+      name,
+      authorEmail: userData.email
     }),
   })
     .then((res) => res.json())
@@ -60,3 +78,13 @@ function submitReport() {
 
   document.getElementById("report-form").reset();
 }
+
+function SignOut(e) {
+  e.preventDefault();
+  localStorage.removeItem("user");
+  console.log("Removed Item", localStorage.getItem("user"))
+
+  window.location.href = "/signin.html";
+}
+
+signOut.addEventListener('click', (e) => SignOut(e))

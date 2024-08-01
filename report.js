@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const data = JSON.parse(responseText); // Parse the response text to JSON
     const reportsList = document.getElementById("reports-list");
 
-    console.log(data);
-
     if (data && data.length > 0) {
       data.forEach((report) => {
         const reportItem = document.createElement("li");
@@ -16,6 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         reportItem.innerHTML = `
               <h3>Type: ${report.type}</h3>
               <p>${report.details}</p>
+              <p>User who bullied: ${report.username}</p>
             `;
         reportsList.appendChild(reportItem);
       });
